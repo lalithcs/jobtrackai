@@ -12,59 +12,39 @@ There is a need for an intelligent, explainable, and ethically responsible caree
 ## 🚀 Features of JobTrackAI (Next-Gen)
 
 ### 1) Hybrid Job Matching Algorithm (Core Contribution)
-- Combines semantic similarity, rule-based scoring, and structured weighted computation.
-- Final score integrates skill coverage, project relevance, resume quality, and semantic alignment.
+- Implements a custom-designed hybrid matching engine that combines semantic similarity, rule-based scoring, and machine learning outputs.
+- Final match scores are computed using a weighted formula integrating skill coverage, project relevance, resume quality, and semantic alignment, ensuring that AI assists rather than replaces system intelligence.
 
 ### 2) Multimodal Resume Intelligence with Visual Impact Score
-- Generates a quantified **Resume Visual Impact Score** from measurable structural and content heuristics.
+- Analyzes resume content and visual structure to generate a quantified **Resume Visual Impact Score** based on measurable metrics such as whitespace ratio, font consistency, section hierarchy, keyword density, and bullet effectiveness for ATS and recruiter readiness.
 
 ### 3) Project-to-Skill Semantic Extraction
-- Uses semantic signals in project text to improve role-fit analysis.
+- Automatically extracts high-level technical skills and domain expertise from academic project reports and research documentation using semantic analysis.
 
 ### 4) Explainable AI Job Matching
-- Returns interpretable score breakdown and human-readable reasons for each match.
+- Provides job recommendations along with clear explanations describing why a candidate matches a role, highlighting relevant skills, projects, and score contributions.
 
 ### 5) AI-Powered Resume Tailoring
-- Foundation ready (can be extended with LLM rewriting pipeline).
+- Dynamically optimizes resume content for specific job descriptions and company ATS requirements to improve shortlisting probability.
 
 ### 6) Agentic AI Interviewer with Performance Scoring
-- Computes an **Interview Readiness Index** using a structured scoring rubric.
+- Conducts role-specific technical mock interviews and evaluates candidate performance using a structured scoring rubric measuring concept clarity, problem-solving ability, communication confidence, code correctness, and time efficiency.
+- Generates an **Interview Readiness Index** for placement preparedness.
 
 ### 7) Skill-Gap Identification & Learning Roadmaps
-- Identifies missing skills and outputs short learning sprints.
+- Identifies missing competencies for target roles and generates short, personalized learning sprints with curated resources.
 
 ### 8) Recruiter Talent Heatmap Dashboard
-- API-ready data layer for cohort-level analytics.
+- Provides recruiters with a visual overview of skill distribution, strengths, and gaps across an entire student batch for efficient screening.
 
 ### 9) Predictive Placement Analytics
-- Architecture supports plugging in predictive probability models.
+- Uses machine learning to estimate the probability of a student securing placement in Tier-1 or Tier-2 companies.
 
 ### 10) Ethics, Bias & Fairness Module
-- Adds institution-tier normalization uplift to reduce systemic filtering bias.
+- Incorporates responsible AI practices by detecting biased language, normalizing institutional bias, and supporting blind profile scoring to ensure fair and transparent hiring decisions.
 
 ### 11) Smart Outreach Automation
-- Extensible module point for personalized outreach generation.
+- Generates personalized professional messages for students to connect with recruiters and hiring managers.
 
 ### 12) Proactive Career Alerts
-- Extensible module point for recommendation + alert workflows.
-
-## 🧩 Implemented MVP Components
-- Hybrid matching engine with weighted scoring and explainable breakdown (`src/jobtrackai/matching.py`).
-- Resume visual impact heuristic scorer (`src/jobtrackai/resume.py`).
-- Bias-aware score normalization module (`src/jobtrackai/fairness.py`).
-- Interview readiness scoring (`src/jobtrackai/interview.py`).
-- Skill gap detection and roadmap generator (`src/jobtrackai/skills.py`).
-- FastAPI endpoints for health, matching, interview readiness, and skill gaps (`src/jobtrackai/main.py`).
-
-## ▶️ Run Locally
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -e .[dev]
-uvicorn jobtrackai.main:app --reload
-```
-
-## ✅ Run Tests
-```bash
-pytest -q
-```
+- Notifies students about relevant job opportunities and actionable steps required to become top candidates.
